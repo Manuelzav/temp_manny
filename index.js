@@ -25,16 +25,32 @@ function convertToCelsius(f) {
  * the given Fahrenheit temperature `f`
  */
 function describeTemperature(f) {
+  if (f < 32){
+    return "very col{d";
+  } else if (f < 64) {
+    return "cold";
+  } else if (f<86) {
+    return "warm";
+  } else if (f<100) {
+    return "hot";
+  } else {
+    return "very hot";
+  }
   // TODO
-}
+} 
 
 /**
  * @param {number} limit
  * @returns {number} a random integer in the range [0, `limit`)
  */
 function getRandomInt(limit) {
+  const percentage = Math.random()//line will generate a random percentage//
   // TODO
+  const randomfloat = percentage * limit;
+  const randomint = Math.floor(randomfloat);
+  return randomint;
 }
+
 
 // -------------------- DO NOT CHANGE THE CODE BELOW ---------------------- //
 /**
